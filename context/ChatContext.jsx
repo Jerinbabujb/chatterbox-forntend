@@ -2,10 +2,10 @@ import { createContext, useContext, useEffect, useState } from "react";
 import {AuthContext} from './AuthContext';
 import toast from "react-hot-toast";
 
-export const chatContext=createContext();
+export const ChatContext=createContext();
 
 
-export const chatProvider=({children})=>{
+export const ChatProvider=({children})=>{
 
     const [messages,setMessages]=useState([]);
     const [users,setUsers]=useState([]);
@@ -42,7 +42,7 @@ export const chatProvider=({children})=>{
 
     const sendMessage=async(messageData)=>{
         try{
-            const {data}= await axios.post(`/api/messsages/send/${setSelectedUser._id}`,messageData)
+            const {data}= await axios.post(`/api/messages/send/${selectedUser._id}`,messageData)
             if(data.success){
                 setMessages((prevMessages)=>[...prevMessages,data.newMessage])
 
@@ -86,7 +86,7 @@ export const chatProvider=({children})=>{
         messages,
         users,
         selectedUser,
-        setMessages,
+        getMessages,
         setSelectedUser,
         unseenMessages,
         setUnseenMessages,
@@ -95,8 +95,8 @@ export const chatProvider=({children})=>{
     }
     return (
 
-    <chatContext.Provider value={value}>
+    <ChatContext.Provider value={value}>
         {children}
-    </chatContext.Provider>
+    </ChatContext.Provider>
     )
 }
