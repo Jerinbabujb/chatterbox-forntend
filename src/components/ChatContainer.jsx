@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from 'react'
-import assets, { messagesDummyData, userDummyData } from '../assets/assets'
+import assets, { messagesDummyData, userDummyData } from '../assets'
 import { formatMessageTime } from '../lib/utils';
 import { ChatContext } from '../../context/ChatContext';
 import { AuthContext } from '../../context/AuthContext';
@@ -88,7 +88,7 @@ const ChatContainer = () => {
     </div>
   ) : (
     <div className='flex flex-col items-center justify-center gap-2 text-gray-500 bg-white/10 max-md:hidden'>
-      <img src='/src/assets/chatter-box-chat-high-resolution-logo.png' alt='' className='max-w-16'/>
+      <img src='/assets/chatter-box-chat-high-resolution-logo.png' alt='' className='max-w-16'/>
       <p className='text-lg font-medium text-white'>Chat anytime, anywhere</p>
     </div>
   )

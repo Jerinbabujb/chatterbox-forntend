@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import assets from '../assets/assets'
+import assets from '../assets'
 import {useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../context/AuthContext';

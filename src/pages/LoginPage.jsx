@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import assets from '../assets/assets'
 import { useContext } from 'react';
 import { AuthContext } from '../../context/AuthContext';
+import assets from '../assets';
 
 const LoginPage = () => {
   const [currentSate,setCurrentState]=useState('Sign Up');
