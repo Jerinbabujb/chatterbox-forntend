@@ -25,7 +25,7 @@ const onSubmitHandler=(event)=>{
 
   return (
     <div className='min-h-screen bg-cover bg-center  flex items-center justify-center gap-8 sm:justify-evenly max-sm:flex-col backdrop-blur-2xl'>
-      <img src={assets.logo}  alt='' className='w-[min(30vw,250px)]'/>
+      <img src="/assets/chatter-box-chat-high-resolution-logo.png"  alt='' className='w-[min(30vw,250px)]'/>
     <form className='border-2 bg-white/8 text-white border-gray-500 p-6 flex flex-col gap-6 rounded-lg shadow-lg' onSubmit={onSubmitHandler}>
     <h2 className='font-medium text-2xl flex justify-between items-center'>{currentSate} 
       {isDataSubmitted &&
