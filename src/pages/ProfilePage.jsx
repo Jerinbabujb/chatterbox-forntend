@@ -12,7 +12,7 @@ const ProfilePage = () => {
   const [bio,setBio]= useState(authUser.bio);
   
   const handleSubmit=async(e)=>{
-    e.preventDefault;
+    e.preventDefault();
     if(!selectedImg){
       await updateProfile({fullName:name,bio});
         navigate("/");
